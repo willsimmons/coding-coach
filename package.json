@@ -22,7 +22,9 @@
     "watch:css": "postcss src/theme/tailwind.css -o src/theme/index.css -w",
     "i18n-add": "lingui add-locale",
     "i18n-extract": "lingui extract",
-    "i18n-compile": "lingui compile"
+    "i18n-compile": "lingui compile",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
@@ -39,7 +41,8 @@
     "react-dom": "^16.5.0",
     "react-scripts": "2.1.1",
     "remark": "^10.0.1",
-    "remark-react": "^5.0.0"
+    "remark-react": "^5.0.0",
+    "snyk": "^1.190.0"
   },
   "husky": {
     "hooks": {
@@ -93,5 +96,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "snyk": true
 }
